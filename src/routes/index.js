@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Login from '../pages/Login';
-import AppContent from '../pages/AppContent';
+import Login from '../containers/Login';
+import AppContent from '../containers/AppContent';
 
 export default function Routes() {
   return (

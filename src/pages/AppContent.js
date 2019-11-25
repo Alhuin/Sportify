@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import '../index.css'
-import Header from '../components/Header'
+import Header from '../containers/Header'
 import TabBar from "../components/TabBar";
 import HomeContent from "../components/HomeContent";
 import SearchContent from "../components/SearchContent";
@@ -13,6 +13,10 @@ class AppContent extends Component {
     this.state = {
       type: "Home",
     }
+  }
+
+  componentWillMount() {
+    console.log(this.props);
   }
 
   scrollToBottom = () => {
@@ -49,7 +53,7 @@ class AppContent extends Component {
     }
     return(
       <div className="MainContainer">
-        <Header message="Sportify" />
+        <Header type={type} />
         {content}
         <TabBar className="tabBar" updateType={this.updateType} />
         <div ref={(el) => { this.tabBar = el; }} />
