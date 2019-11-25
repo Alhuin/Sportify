@@ -25,6 +25,7 @@ class TabBar extends Component {
         onChange={(event, newValue) => {
           this.setState({value: newValue});
         }}
+        style={{position: 'fixed', bottom: 10, width:'100%'}}
         showLabels
       >
         <BottomNavigationAction value="home" label="Home" icon={<HomeIcon />} onClick={()=>updateType("Home")} />

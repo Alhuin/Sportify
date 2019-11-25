@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import Header from '../containers/Header'
 import '../index.css'
-import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-
+import MembershipModal from '../components/MembershipModal'
 
 class Login extends Component {
   constructor(props) {
@@ -24,17 +23,21 @@ class Login extends Component {
     this.setState({lastName});
   };
 
-  handleClick = () => {
-    const {name, lastName} = this.state;
-    const {setName, setLastName, history} = this.props;
+  handleClick = (membership) => {
+    let {name, lastName} = this.state;
+    const {setName, setLastName, setMembership, history} = this.props;
 
     if (name !== "") {
+      name = name.charAt(0).toUpperCase() + name.slice(1);
       setName(name);
     }
     if (lastName !== "") {
+      lastName = lastName.charAt(0).toUpperCase() + lastName.slice(1);
       setLastName(lastName);
     }
-    console.log(this.props);
+    if (membership !== "") {
+      setMembership(membership);
+    }
     history.push('/app')
   };
 
@@ -45,9 +48,7 @@ class Login extends Component {
         <div className="content">
           <TextField id="outlined-basic" label="Prénom" variant="outlined" style={{ marginBottom: '10%' }} onChange={this.updateName}/>
           <TextField id="outlined-basic" label="Nom" variant="outlined" style={{ marginBottom: '10%' }} onChange={this.updateLastName}/>
-          <Button variant="contained" color="primary" onClick={this.handleClick}>
-            Lancer la démo
-          </Button>
+          <MembershipModal handleClick={this.handleClick}/>
         </div>
       </div>
     )

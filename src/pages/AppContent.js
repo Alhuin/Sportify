@@ -15,18 +15,6 @@ class AppContent extends Component {
     }
   }
 
-  componentWillMount() {
-    console.log(this.props);
-  }
-
-  scrollToBottom = () => {
-    this.tabBar.scrollIntoView({ behavior: "smooth" });
-  };
-
-  componentDidMount() {
-    this.scrollToBottom();
-  };
-
   updateType = (type) => {
     this.setState({type})
   };
