@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Spotify/static/css/main.246be130.chunk.css",
-    "main.js": "/Spotify/static/js/main.54641d8a.chunk.js",
-    "main.js.map": "/Spotify/static/js/main.54641d8a.chunk.js.map",
-    "runtime-main.js": "/Spotify/static/js/runtime-main.e04bae9b.js",
-    "runtime-main.js.map": "/Spotify/static/js/runtime-main.e04bae9b.js.map",
-    "static/js/2.8472fd3f.chunk.js": "/Spotify/static/js/2.8472fd3f.chunk.js",
-    "static/js/2.8472fd3f.chunk.js.map": "/Spotify/static/js/2.8472fd3f.chunk.js.map",
-    "index.html": "/Spotify/index.html",
-    "precache-manifest.22d51676331be048a8c5a2b8097e0971.js": "/Spotify/precache-manifest.22d51676331be048a8c5a2b8097e0971.js",
-    "service-worker.js": "/Spotify/service-worker.js",
-    "static/css/main.246be130.chunk.css.map": "/Spotify/static/css/main.246be130.chunk.css.map"
+    "main.css": "/Sportify/static/css/main.246be130.chunk.css",
+    "main.js": "/Sportify/static/js/main.ed5a1824.chunk.js",
+    "main.js.map": "/Sportify/static/js/main.ed5a1824.chunk.js.map",
+    "runtime-main.js": "/Sportify/static/js/runtime-main.1ff13c89.js",
+    "runtime-main.js.map": "/Sportify/static/js/runtime-main.1ff13c89.js.map",
+    "static/js/2.8472fd3f.chunk.js": "/Sportify/static/js/2.8472fd3f.chunk.js",
+    "static/js/2.8472fd3f.chunk.js.map": "/Sportify/static/js/2.8472fd3f.chunk.js.map",
+    "index.html": "/Sportify/index.html",
+    "precache-manifest.0c24e188ad0574ad76ffc8e805925ff8.js": "/Sportify/precache-manifest.0c24e188ad0574ad76ffc8e805925ff8.js",
+    "service-worker.js": "/Sportify/service-worker.js",
+    "static/css/main.246be130.chunk.css.map": "/Sportify/static/css/main.246be130.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.e04bae9b.js",
+    "static/js/runtime-main.1ff13c89.js",
     "static/js/2.8472fd3f.chunk.js",
     "static/css/main.246be130.chunk.css",
-    "static/js/main.54641d8a.chunk.js"
+    "static/js/main.ed5a1824.chunk.js"
   ]
 }
