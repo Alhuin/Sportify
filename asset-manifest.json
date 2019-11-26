@@ -1,21 +1,21 @@
 {
   "files": {
     "main.css": "/Sportify/static/css/main.246be130.chunk.css",
-    "main.js": "/Sportify/static/js/main.ed5a1824.chunk.js",
-    "main.js.map": "/Sportify/static/js/main.ed5a1824.chunk.js.map",
+    "main.js": "/Sportify/static/js/main.24607ba4.chunk.js",
+    "main.js.map": "/Sportify/static/js/main.24607ba4.chunk.js.map",
     "runtime-main.js": "/Sportify/static/js/runtime-main.1ff13c89.js",
     "runtime-main.js.map": "/Sportify/static/js/runtime-main.1ff13c89.js.map",
-    "static/js/2.8472fd3f.chunk.js": "/Sportify/static/js/2.8472fd3f.chunk.js",
-    "static/js/2.8472fd3f.chunk.js.map": "/Sportify/static/js/2.8472fd3f.chunk.js.map",
+    "static/js/2.c9880dcf.chunk.js": "/Sportify/static/js/2.c9880dcf.chunk.js",
+    "static/js/2.c9880dcf.chunk.js.map": "/Sportify/static/js/2.c9880dcf.chunk.js.map",
     "index.html": "/Sportify/index.html",
-    "precache-manifest.0c24e188ad0574ad76ffc8e805925ff8.js": "/Sportify/precache-manifest.0c24e188ad0574ad76ffc8e805925ff8.js",
+    "precache-manifest.f06eea44525728e640815180c03d0bd5.js": "/Sportify/precache-manifest.f06eea44525728e640815180c03d0bd5.js",
     "service-worker.js": "/Sportify/service-worker.js",
     "static/css/main.246be130.chunk.css.map": "/Sportify/static/css/main.246be130.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.1ff13c89.js",
-    "static/js/2.8472fd3f.chunk.js",
+    "static/js/2.c9880dcf.chunk.js",
     "static/css/main.246be130.chunk.css",
-    "static/js/main.ed5a1824.chunk.js"
+    "static/js/main.24607ba4.chunk.js"
   ]
 }
