@@ -26,7 +26,10 @@ class Header extends Component {
         </div>;
         break;
       default:
-        content = "Sportify";
+        content = <div style={{display: 'flex', flexDirection:'column', alignItems: 'center', justifyContent:'center'}}>
+          <p>MSS</p>
+          <p style={{fontSize: '12px'}}>Multi-Sports for Students</p>
+        </div>;
     }
 
     return(
