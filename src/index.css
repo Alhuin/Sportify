@@ -8,11 +8,12 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
+  height: 100%;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100%;
   width: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 
 code {
@@ -47,6 +48,5 @@ code {
   justify-content: center;
   align-items: center;
   color: white;
-  background: linear-gradient(to bottom right, #3D4FFF, #7CBBFF);
   font-size: 22px;
 }
