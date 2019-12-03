@@ -34,6 +34,8 @@ export default ({handleClick}) => {
         >
           <Paper className={classes.paper} onClick={()=>handleClick('Iron Man')}>
             Offre Iron Man
+            50 euros
+            16 accès par mois dans toutes nos salles partenaires
           </Paper>
         </Grid>
         <Grid
@@ -41,7 +43,9 @@ export default ({handleClick}) => {
           xs={10}
         >
           <Paper className={classes.paper} onClick={()=>handleClick('Machin')}>
-            Offre Machin
+            Offre Découverte
+            30 euros
+            2 acces par mois dans quatre de nos salles partnaires
           </Paper>
         </Grid>
       </Grid>
