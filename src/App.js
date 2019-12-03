@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Provider } from 'react-redux';
 import { Router } from 'react-router-dom';
-import MetaTags from 'react-meta-tags';
+import Helmet from 'react-helmet';
 import store from './redux/store/store';
 import history from './services/history';
 import Routes from './routes';
@@ -29,20 +29,30 @@ class App extends Component {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
     render() {
-        const { width } = this.state;
+        const { width, height } = this.state;
         let content = <>
-        <MetaTags>
+        <Helmet>
             <meta name="google" value="notranslate" />
             <meta name="description" content="MSS, Mutli-Sports for Students" />
             <title>MSS Demo</title>
-        </MetaTags>
+            <script>
+                {`
+                    var lockFunction =  window.screen.orientation.lock;
+                    if (lockFunction.call(window.screen.orientation, 'landscape')) {
+                    console.log('Orientation locked')
+                    } else {
+                        console.error('There was a problem in locking the orientation')
+                    }
+                `}
+            </script>
+        </Helmet>
         <Provider store={store}>
             <Router history={history}>
                 <Routes />
             </Router>
         </Provider>
         </>;
-        if (width > 480) {
+        if (width > 480 && height > 897) {
             content = <div style={{width: '100vw', height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
                 <p>Cette démo n'est pas accessible sur ordinateur, merci d'y accéder depuis un mobile.</p>
             </div>
