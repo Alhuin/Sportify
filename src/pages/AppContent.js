@@ -21,6 +21,7 @@ class AppContent extends Component {
 
   render() {
     const { type } = this.state;
+    const { favorites, addToFavorites, removeFromFavorites } = this.props;
     let content = "";
 
     switch (type) {
@@ -28,7 +29,7 @@ class AppContent extends Component {
         content = <HomeContent />;
         break;
       case "Search":
-        content = <SearchContent />;
+        content = <SearchContent favorites={favorites} addToFavorites={addToFavorites} removeFromFavorites={removeFromFavorites} />;
         break;
       case "Passes":
         content = <PassesContent />;
@@ -44,7 +45,6 @@ class AppContent extends Component {
         <Header type={type} />
         {content}
         <TabBar className="tabBar" updateType={this.updateType} />
-        <div ref={(el) => { this.tabBar = el; }} />
       </div>
     )
   }

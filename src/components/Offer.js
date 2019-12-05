@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import List from "@material-ui/core/List";
@@ -12,6 +11,8 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Grid from "@material-ui/core/Grid";
 import LocationIcon from '@material-ui/icons/WhereToVote';
 import PriceIcon from '@material-ui/icons/Euro';
+import CardActions from "@material-ui/core/CardActions";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -31,44 +32,47 @@ export default ({offer, partners, passes, price, handleClick}) => {
 
 
     return (
-        <Card className={classes.card} onClick={() => handleClick(offer)}>
-            <CardActionArea>
-                <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2" style={{textAlign: 'center'}}>
-                        {offer}
-                    </Typography>
-                    <Grid item xs={12} md={6}>
-                        <div className={classes.demo}>
-                            <List dense={dense}>
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <LocationIcon />
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        primary={partners}
-                                    />
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <PassesIcon />
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        primary={passes}
-                                    />
-                                </ListItem>
-                                <ListItem>
-                                    <ListItemIcon>
-                                        <PriceIcon />
-                                    </ListItemIcon>
-                                    <ListItemText
-                                        primary={price}
-                                    />
-                                </ListItem>
-                            </List>
-                        </div>
-                    </Grid>
-                </CardContent>
-            </CardActionArea>
+        <Card className={classes.card}>
+            <CardContent>
+                <Typography gutterBottom variant="h5" component="h2" style={{textAlign: 'center'}}>
+                    {offer}
+                </Typography>
+                <Grid item xs={12} md={6}>
+                    <div className={classes.demo}>
+                        <List dense={dense}>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <LocationIcon />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary={partners}
+                                />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <PassesIcon />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary={passes}
+                                />
+                            </ListItem>
+                            <ListItem>
+                                <ListItemIcon>
+                                    <PriceIcon />
+                                </ListItemIcon>
+                                <ListItemText
+                                    primary={price}
+                                />
+                            </ListItem>
+                        </List>
+                    </div>
+                </Grid>
+            </CardContent>
+            <CardActions style={{justifyContent: 'flex-end'}}>
+                <Button size="small" color="primary"  onClick={() => handleClick(offer)}>
+                    Lancer la démo >>
+                </Button>
+            </CardActions>
         </Card>
     );
 }

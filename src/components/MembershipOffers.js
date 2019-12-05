@@ -32,13 +32,13 @@ export default ({handleClick}) => {
           item
           xs={10}
         >
-          <Offer offer="Iron Man" partners="Toutes nos salles partenaires" passes="16 pass par mois" price="50" handleClick={handleClick}/>
+          <Offer offer="Explorer" partners="Deux salles partenaires / mois" passes="4 pass par salle" price="30" handleClick={handleClick}/>
         </Grid>
         <Grid
           item
           xs={10}
         >
-          <Offer offer="Explorer" partners="Deux salles partenaires / mois" passes="4 pass par salle" price="30" handleClick={handleClick}/>
+          <Offer offer="Iron Man" partners="Toutes nos salles partenaires" passes="16 pass par mois" price="50" handleClick={handleClick}/>
         </Grid>
       </Grid>
     </div>

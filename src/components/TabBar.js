@@ -19,20 +19,22 @@ class TabBar extends Component {
     const {updateType} = this.props;
 
     return (
-      <BottomNavigation
-        className="tabBar"
-        value={value}
-        onChange={(event, newValue) => {
-          this.setState({value: newValue});
-        }}
-        style={{position: 'fixed', bottom: 10, width:'100%'}}
-        showLabels
-      >
-        <BottomNavigationAction value="home" label="Home" icon={<HomeIcon />} onClick={()=>updateType("Home")} />
-        <BottomNavigationAction label="search" icon={<SearchIcon />} onClick={()=>updateType("Search")} />
-        <BottomNavigationAction label="passes" icon={<PassesIcon />} onClick={()=>updateType("Passes")} />
-        <BottomNavigationAction label="Profile" icon={<ProfileIcon />} onClick={()=>updateType("Profile")} />
-      </BottomNavigation>
+      <div style={{position: 'fixed', bottom: 0, width:'100%'}} >
+        <BottomNavigation
+          className="tabBar"
+          value={value}
+          onChange={(event, newValue) => {
+            this.setState({value: newValue});
+          }}
+          showLabels
+        >
+          <BottomNavigationAction value="home" label="Home" icon={<HomeIcon />} onClick={()=>updateType("Home")} />
+          <BottomNavigationAction label="search" icon={<SearchIcon />} onClick={()=>updateType("Search")} />
+          <BottomNavigationAction label="passes" icon={<PassesIcon />} onClick={()=>updateType("Passes")} />
+          <BottomNavigationAction label="Profile" icon={<ProfileIcon />} onClick={()=>updateType("Profile")} />
+        </BottomNavigation>
+        <div style={{backgroundColor: 'white', height: 10, width: '100%'}}/>
+      </div>
     )
   }
 }

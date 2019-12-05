@@ -24,6 +24,7 @@ code {
 .MainContainer {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   height: 100vh;
   width: 100vw;
 }
@@ -43,7 +44,7 @@ code {
 
 .HeaderContainer {
   display: flex;
-  height: 33vh;
+  height: 150px;
   width: 100vw;
   justify-content: center;
   align-items: center;

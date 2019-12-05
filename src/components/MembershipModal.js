@@ -47,8 +47,8 @@ export default ({handleClick}) => {
             <IconButton edge="start" color="inherit" onClick={handleClose} aria-label="close">
               <CloseIcon />
             </IconButton>
-            <Typography variant="h6" className={classes.title}>
-              Choix de l'offre pour la démo
+            <Typography variant="h6" className={classes.title} >
+              Les Offres MSS
             </Typography>
           </Toolbar>
         </AppBar>
