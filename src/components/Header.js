@@ -12,7 +12,7 @@ class Header extends Component {
 
     switch (type) {
       case "Home":
-        content = `Bonjour ${name} ${lastName} !`;
+        content = `Bonjour ${name} !`;
         break;
       case "Search":
         content = "Trouver une salle";

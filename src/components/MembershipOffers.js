@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Offer from "./Offer";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -32,21 +32,13 @@ export default ({handleClick}) => {
           item
           xs={10}
         >
-          <Paper className={classes.paper} onClick={()=>handleClick('Iron Man')}>
-            Offre Iron Man
-            50 euros
-            16 accès par mois dans toutes nos salles partenaires
-          </Paper>
+          <Offer offer="Iron Man" partners="Toutes nos salles partenaires" passes="16 pass par mois" price="50" handleClick={handleClick}/>
         </Grid>
         <Grid
           item
           xs={10}
         >
-          <Paper className={classes.paper} onClick={()=>handleClick('Machin')}>
-            Offre Découverte
-            30 euros
-            2 acces par mois dans quatre de nos salles partnaires
-          </Paper>
+          <Offer offer="Explorer" partners="Deux salles partenaires / mois" passes="4 pass par salle" price="30" handleClick={handleClick}/>
         </Grid>
       </Grid>
     </div>

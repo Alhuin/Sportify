@@ -48,7 +48,7 @@ export default ({handleClick}) => {
               <CloseIcon />
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              Les offres Sportify
+              Choix de l'offre pour la démo
             </Typography>
           </Toolbar>
         </AppBar>

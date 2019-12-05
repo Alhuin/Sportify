@@ -28,6 +28,7 @@ class App extends Component {
     updateWindowDimensions() {
         this.setState({ width: window.innerWidth, height: window.innerHeight });
     }
+
     render() {
         const { width, height } = this.state;
         let content = <>
@@ -35,16 +36,6 @@ class App extends Component {
             <meta name="google" value="notranslate" />
             <meta name="description" content="MSS, Mutli-Sports for Students" />
             <title>MSS Demo</title>
-            <script>
-                {`
-                    var lockFunction =  window.screen.orientation.lock;
-                    if (lockFunction.call(window.screen.orientation, 'landscape')) {
-                    console.log('Orientation locked')
-                    } else {
-                        console.error('There was a problem in locking the orientation')
-                    }
-                `}
-            </script>
         </Helmet>
         <Provider store={store}>
             <Router history={history}>
