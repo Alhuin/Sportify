@@ -10,7 +10,7 @@ class TabBar extends Component {
   constructor(props){
     super(props);
     this.state = {
-      value: "recents",
+      value: "home",
     };
 }
 
