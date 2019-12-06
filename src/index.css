@@ -44,7 +44,7 @@ code {
 
 .HeaderContainer {
   display: flex;
-  height: 150px;
+  height: 200px;
   width: 100vw;
   justify-content: center;
   align-items: center;

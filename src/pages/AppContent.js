@@ -21,7 +21,7 @@ class AppContent extends Component {
 
   render() {
     const { type } = this.state;
-    const { favorites, addToFavorites, removeFromFavorites } = this.props;
+    const { favorites, addToFavorites, removeFromFavorites, setFirstSearch, firstSearch } = this.props;
     let content = "";
 
     switch (type) {
@@ -29,7 +29,13 @@ class AppContent extends Component {
         content = <HomeContent />;
         break;
       case "Search":
-        content = <SearchContent favorites={favorites} addToFavorites={addToFavorites} removeFromFavorites={removeFromFavorites} />;
+        content = <SearchContent
+            favorites={favorites}
+            addToFavorites={addToFavorites}
+            removeFromFavorites={removeFromFavorites}
+            setFirstSearch={setFirstSearch}
+            firstSearch={firstSearch}
+        />;
         break;
       case "Passes":
         content = <PassesContent />;

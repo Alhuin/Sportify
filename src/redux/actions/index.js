@@ -1,4 +1,8 @@
-import {SET_NAME, SET_LASTNAME, ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES, SET_MEMBERSHIP} from "./types";
+import {SET_NAME, SET_LASTNAME, ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES, SET_MEMBERSHIP, SET_FIRST_SEARCH} from "./types";
+
+export function setFirstSearch(payload) {
+  return ({type: SET_FIRST_SEARCH, payload});
+}
 
 export function setName(payload) {
   return ({type: SET_NAME, payload});

@@ -1,10 +1,18 @@
-import {SET_NAME, SET_LASTNAME, ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES, SET_MEMBERSHIP} from '../actions/types';
+import {
+  SET_NAME,
+  SET_LASTNAME,
+  ADD_TO_FAVORITES,
+  REMOVE_FROM_FAVORITES,
+  SET_MEMBERSHIP,
+  SET_FIRST_SEARCH
+} from '../actions/types';
 
 const initialState = {
   name: 'Demo User',
   lastName: '',
   favorites: [],
   membership: '',
+  firstSearch: true,
 };
 
 const userReducer = (state = initialState, action) => {
@@ -31,6 +39,10 @@ const userReducer = (state = initialState, action) => {
     case SET_MEMBERSHIP:
       return {
         ...state, membership: action.payload,
+      };
+    case SET_FIRST_SEARCH:
+      return {
+        ...state, firstSearch: action.payload,
       };
     default:
       return state;
