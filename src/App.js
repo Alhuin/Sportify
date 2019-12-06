@@ -38,7 +38,7 @@ class App extends Component {
             <title>MSS Demo</title>
         </Helmet>
         <Provider store={store}>
-            <Router history={history}>
+            <Router history={history} basename="/Spotify">
                 <Routes />
             </Router>
         </Provider>
