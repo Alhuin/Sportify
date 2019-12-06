@@ -40,6 +40,7 @@ class App extends Component {
         <Provider store={store}>
             <Router history={history} basename="/Spotify">
                 <Routes />
+
             </Router>
         </Provider>
         </>;
