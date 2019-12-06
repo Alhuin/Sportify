@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7f809d08a2a9850ca3062bd0e58d15a4",
+    "revision": "fce4f62356685cfa2bd8bc3e8abee9e4",
     "url": "/Sportify/index.html"
   },
   {
-    "revision": "9aed5d7bd64cd7e00d11",
+    "revision": "e9d8f917c71d3ca540c4",
     "url": "/Sportify/static/css/main.4e1074ca.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Sportify/static/js/2.adfe05c7.chunk.js"
   },
   {
-    "revision": "9aed5d7bd64cd7e00d11",
-    "url": "/Sportify/static/js/main.f4147ca1.chunk.js"
+    "revision": "e9d8f917c71d3ca540c4",
+    "url": "/Sportify/static/js/main.83ac3a4e.chunk.js"
   },
   {
     "revision": "72b2d5899293edcc6e8c",
