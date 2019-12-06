@@ -28,10 +28,10 @@ class TabBar extends Component {
           }}
           showLabels
         >
-          <BottomNavigationAction value="home" label="Home" icon={<HomeIcon />} onClick={()=>updateType("Home")} />
-          <BottomNavigationAction label="search" icon={<SearchIcon />} onClick={()=>updateType("Search")} />
-          <BottomNavigationAction label="passes" icon={<PassesIcon />} onClick={()=>updateType("Passes")} />
-          <BottomNavigationAction label="Profile" icon={<ProfileIcon />} onClick={()=>updateType("Profile")} />
+          <BottomNavigationAction value="home" label="Accueil" icon={<HomeIcon />} onClick={()=>updateType("Home")} />
+          <BottomNavigationAction label="Recherche" icon={<SearchIcon />} onClick={()=>updateType("Search")} />
+          <BottomNavigationAction label="Mes Pass" icon={<PassesIcon />} onClick={()=>updateType("Passes")} />
+          <BottomNavigationAction label="Profil" icon={<ProfileIcon />} onClick={()=>updateType("Profile")} />
         </BottomNavigation>
         <div style={{backgroundColor: 'white', height: 10, width: '100%'}}/>
       </div>
