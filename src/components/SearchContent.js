@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SearchContent({ favorites, addToFavorites, removeFromFavorites, setFirstSearch, firstSearch }) {
+export default function SearchContent({ favorites, addToFavorites, removeFromFavorites, setFirstSearch, firstSearch, history }) {
   const classes = useStyles();
 
   const favIcon = (partner) => {
@@ -65,6 +65,15 @@ export default function SearchContent({ favorites, addToFavorites, removeFromFav
                     </Typography>
                   </React.Fragment>
                 }
+                onClick={() =>{
+                  history.push({
+                      pathname : '/partner',
+                      state :{
+                        partner : partner,
+                      }
+                    }
+                  );
+                }}
             />
           </ListItem>
           <Divider variant="inset" component="li"/>

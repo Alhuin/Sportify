@@ -39,6 +39,7 @@ class AppContent extends Component {
             removeFromFavorites={removeFromFavorites}
             setFirstSearch={setFirstSearch}
             firstSearch={firstSearch}
+            history={history}
         />;
         break;
       case "Passes":
