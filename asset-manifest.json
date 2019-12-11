@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Sportify/static/css/main.4e1074ca.chunk.css",
-    "main.js": "/Sportify/static/js/main.00619b96.chunk.js",
-    "main.js.map": "/Sportify/static/js/main.00619b96.chunk.js.map",
+    "main.js": "/Sportify/static/js/main.21dd2158.chunk.js",
+    "main.js.map": "/Sportify/static/js/main.21dd2158.chunk.js.map",
     "runtime-main.js": "/Sportify/static/js/runtime-main.1ff13c89.js",
     "runtime-main.js.map": "/Sportify/static/js/runtime-main.1ff13c89.js.map",
     "static/css/2.4482b0e7.chunk.css": "/Sportify/static/css/2.4482b0e7.chunk.css",
     "static/js/2.e9f5a42d.chunk.js": "/Sportify/static/js/2.e9f5a42d.chunk.js",
     "static/js/2.e9f5a42d.chunk.js.map": "/Sportify/static/js/2.e9f5a42d.chunk.js.map",
     "index.html": "/Sportify/index.html",
-    "precache-manifest.bde77a285633a9c2f86689cadfdc4520.js": "/Sportify/precache-manifest.bde77a285633a9c2f86689cadfdc4520.js",
+    "precache-manifest.9501c9ee69a68a5d6e9d9d659217961d.js": "/Sportify/precache-manifest.9501c9ee69a68a5d6e9d9d659217961d.js",
     "service-worker.js": "/Sportify/service-worker.js",
     "static/css/2.4482b0e7.chunk.css.map": "/Sportify/static/css/2.4482b0e7.chunk.css.map",
     "static/css/main.4e1074ca.chunk.css.map": "/Sportify/static/css/main.4e1074ca.chunk.css.map"
@@ -19,6 +19,6 @@
     "static/css/2.4482b0e7.chunk.css",
     "static/js/2.e9f5a42d.chunk.js",
     "static/css/main.4e1074ca.chunk.css",
-    "static/js/main.00619b96.chunk.js"
+    "static/js/main.21dd2158.chunk.js"
   ]
 }
