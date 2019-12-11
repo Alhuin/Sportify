@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Sportify/precache-manifest.b0f4cfdac8f5bbf931bd9c2775590c9a.js"
+  "/Sportify/precache-manifest.037f9c8ecaa96bae7ee3983710350656.js"
 );
 
 self.addEventListener('message', (event) => {
