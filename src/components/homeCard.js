@@ -9,7 +9,6 @@ import ListItemText from "@material-ui/core/ListItemText";
 import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
-import FavIcontrue from '@material-ui/icons/Favorite';
 import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
 import IconButton from "@material-ui/core/IconButton";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
@@ -37,7 +36,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default ({title, favorites, passes, removeFromFavorites, history}) => {
+export default ({title, favorites, passes, history}) => {
     const classes = useStyles();
     const [dense] = React.useState(false);
 
@@ -61,7 +60,6 @@ export default ({title, favorites, passes, removeFromFavorites, history}) => {
                       primary={favorite.Nom}
                       secondary={
                         <React.Fragment>
-                          <FavIcontrue className={classes.favIcon} onClick={() => removeFromFavorites(favorite)} />
                           <Typography
                             component="span"
                             variant="body2"
@@ -73,6 +71,20 @@ export default ({title, favorites, passes, removeFromFavorites, history}) => {
                         </React.Fragment>
                       }
                     />
+                    <ListItemSecondaryAction>
+                      <IconButton edge="end"  onClick={() =>{
+                        console.log(history);
+                        history.push({
+                            pathname : '/partner',
+                            state :{
+                              partner : favorite,
+                            }
+                          }
+                        );
+                      }}>
+                        <ArrowForwardIcon/>
+                      </IconButton >
+                    </ListItemSecondaryAction>
                   </ListItem>
                 { favorites.length > 1 &&
                   <Divider variant="inset" component="li"/>
@@ -118,8 +130,9 @@ export default ({title, favorites, passes, removeFromFavorites, history}) => {
               />
               <ListItemSecondaryAction>
                 <IconButton edge="end" onClick={() =>{
+                  console.log(history);
                   history.push({
-                      pathname : '/Pass',
+                      pathname : '/pass',
                       state :{
                         pass : pass,
                       }
@@ -148,6 +161,7 @@ export default ({title, favorites, passes, removeFromFavorites, history}) => {
             );
         }
     };
+
     return (
         <Card className={classes.card}>
             <CardContent>
