@@ -35,9 +35,9 @@ export default function SearchContent({ favorites, addToFavorites, removeFromFav
   const classes = useStyles();
 
   const favIcon = (partner) => {
-    return (favorites.includes(partner.id)
-        ? <FavIcontrue className={classes.favIcon} onClick={() => removeFromFavorites(partner.id)} />
-        : <FavIconfalse className={classes.favIcon} onClick={() => addToFavorites(partner.id)} />)
+    return (favorites.includes(partner)
+        ? <FavIcontrue className={classes.favIcon} onClick={() => removeFromFavorites(partner)} />
+        : <FavIconfalse className={classes.favIcon} onClick={() => addToFavorites(partner)} />)
   };
 
   const lastMargin = (id) => (id === 18 ? 67 : 0);

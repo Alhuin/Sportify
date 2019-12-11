@@ -1,4 +1,12 @@
-import {SET_NAME, SET_LASTNAME, ADD_TO_FAVORITES, REMOVE_FROM_FAVORITES, SET_MEMBERSHIP, SET_FIRST_SEARCH} from "./types";
+import {
+  SET_NAME,
+  SET_LASTNAME,
+  ADD_TO_FAVORITES,
+  REMOVE_FROM_FAVORITES,
+  SET_MEMBERSHIP,
+  SET_FIRST_SEARCH,
+  GENERATE_PASS
+} from "./types";
 
 export function setFirstSearch(payload) {
   return ({type: SET_FIRST_SEARCH, payload});
@@ -22,4 +30,8 @@ export function removeFromFavorites(payload) {
 
 export function setMembership(payload) {
   return ({type: SET_MEMBERSHIP, payload});
+}
+
+export function generatePass(payload) {
+  return ({type: GENERATE_PASS, payload});
 }

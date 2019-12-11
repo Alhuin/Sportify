@@ -4,13 +4,15 @@ import {
   ADD_TO_FAVORITES,
   REMOVE_FROM_FAVORITES,
   SET_MEMBERSHIP,
-  SET_FIRST_SEARCH
+  SET_FIRST_SEARCH,
+  GENERATE_PASS,
 } from '../actions/types';
 
 const initialState = {
   name: 'Demo User',
   lastName: '',
   favorites: [],
+  passes: [],
   membership: '',
   firstSearch: true,
 };
@@ -43,6 +45,11 @@ const userReducer = (state = initialState, action) => {
     case SET_FIRST_SEARCH:
       return {
         ...state, firstSearch: action.payload,
+      };
+    case GENERATE_PASS:
+      return {
+        ...state,
+        passes: [...state.passes, action.payload]
       };
     default:
       return state;

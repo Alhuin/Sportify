@@ -8,12 +8,14 @@ const mapStateToProps = state => ({
   favorites: state.favorites,
   membership: state.membership,
   firstSearch: state.firstSearch,
+  passes : state.passes,
 });
 
 const mapDispatchToProps = dispatch => ({
   addToFavorites: payload => dispatch(actions.addToFavorites(payload)),
   removeFromFavorites: payload => dispatch(actions.removeFromFavorites(payload)),
   setFirstSearch: payload => dispatch(actions.setFirstSearch(payload)),
+  generatePass: payload => dispatch(actions.generatePass(payload)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppContent);

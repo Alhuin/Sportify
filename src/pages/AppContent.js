@@ -15,18 +15,22 @@ class AppContent extends Component {
     }
   }
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   updateType = (type) => {
     this.setState({type})
   };
 
   render() {
     const { type } = this.state;
-    const { favorites, addToFavorites, removeFromFavorites, setFirstSearch, firstSearch } = this.props;
+    const { favorites, addToFavorites, removeFromFavorites, setFirstSearch, firstSearch, passes } = this.props;
     let content = "";
 
     switch (type) {
       case "Home":
-        content = <HomeContent />;
+        content = <HomeContent favorites={favorites} passes={passes} removeFromFavorites={removeFromFavorites}/>;
         break;
       case "Search":
         content = <SearchContent
