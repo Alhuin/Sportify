@@ -27,20 +27,22 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function ProfileContent() {
+export default function ProfileContent({exit}) {
   const classes = useStyles();
 
-  const item = (icon, text) => (
-      <ListItem className={classes.listItem}>
+  const item = (icon, text, disabled) => (
+      <ListItem className={classes.listItem} disabled={disabled}>
         <ListItemAvatar>
           {icon}
         </ListItemAvatar>
         <ListItemText primary={text} />
-        <ListItemSecondaryAction>
-          <IconButton edge="end">
-            <ArrowForwardIcon />
-          </IconButton>
-        </ListItemSecondaryAction>
+        { !disabled &&
+          <ListItemSecondaryAction>
+            <IconButton edge="end" onClick={() => exit()}>
+              <ArrowForwardIcon/>
+            </IconButton>
+          </ListItemSecondaryAction>
+        }
       </ListItem>
   );
 
@@ -51,13 +53,13 @@ export default function ProfileContent() {
             component="nav"
             className={classes.root}
         >
-          {item(<ProfileIcon/>, "Mon Profil")}
-          {item(<PaymentIcon/>, "Moyen de Paiement")}
-          {item(<ReceiptIcon/>, "Mes Factures")}
-          {item(<PeopleIcon/>, "Parrainage")}
-          {item(<DescriptionIcon/>, "CGU - CGV")}
-          {item(<MailOutlineIcon/>, "FAQ")}
-          {item(<ExitToAppIcon/>, "Quitter la démo")}
+          {item(<ProfileIcon/>, "Mon Profil", true)}
+          {item(<PaymentIcon/>, "Moyen de Paiement", true)}
+          {item(<ReceiptIcon/>, "Mes Factures", true)}
+          {item(<PeopleIcon/>, "Parrainage", true)}
+          {item(<DescriptionIcon/>, "CGU - CGV", true)}
+          {item(<MailOutlineIcon/>, "FAQ", true)}
+          {item(<ExitToAppIcon/>, "Quitter la démo", false)}
         </List>
       </div>
   );

@@ -25,7 +25,7 @@ class AppContent extends Component {
 
   render() {
     const { type } = this.state;
-    const { favorites, addToFavorites, removeFromFavorites, setFirstSearch, firstSearch, passes } = this.props;
+    const { favorites, addToFavorites, removeFromFavorites, setFirstSearch, firstSearch, passes, history } = this.props;
     let content = "";
 
     switch (type) {
@@ -45,7 +45,7 @@ class AppContent extends Component {
         content = <PassesContent />;
         break;
       case "Profile":
-        content = <ProfileContent />;
+        content = <ProfileContent exit={() => history.push('/')}/>;
         break;
       default:
         content = "";
