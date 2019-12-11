@@ -20,6 +20,9 @@ class Header extends Component {
       case "Passes":
         content = "Mes Pass";
         break;
+      case "Pass":
+        content = "Mon Pass";
+        break;
       case "Profile":
         content =
         <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}>

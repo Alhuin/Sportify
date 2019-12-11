@@ -10,6 +10,9 @@ import ListItemAvatar from "@material-ui/core/ListItemAvatar";
 import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
 import FavIcontrue from '@material-ui/icons/Favorite';
+import ListItemSecondaryAction from "@material-ui/core/ListItemSecondaryAction";
+import IconButton from "@material-ui/core/IconButton";
+import ArrowForwardIcon from '@material-ui/icons/ArrowForwardIos';
 
 const useStyles = makeStyles(theme => ({
     card: {
@@ -34,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default ({title, favorites, passes, removeFromFavorites}) => {
+export default ({title, favorites, passes, removeFromFavorites, history}) => {
     const classes = useStyles();
     const [dense] = React.useState(false);
 
@@ -71,7 +74,9 @@ export default ({title, favorites, passes, removeFromFavorites}) => {
                       }
                     />
                   </ListItem>
+                { favorites.length > 1 &&
                   <Divider variant="inset" component="li"/>
+                }
               </div>
             ))
         } else {
@@ -89,8 +94,47 @@ export default ({title, favorites, passes, removeFromFavorites}) => {
     };
 
     const passList = (passes) => {
-        if (passes.length > 0) {
-
+      if (passes.length > 0) {
+        return passes.map((pass, id) => (
+          <div key={id} id={id}>
+            <ListItem alignItems="flex-start">
+              <ListItemAvatar>
+                <Avatar src={pass.Lien}/>
+              </ListItemAvatar>
+              <ListItemText
+                primary={pass.Nom}
+                secondary={
+                  <React.Fragment>
+                    <Typography
+                      component="span"
+                      variant="body2"
+                      className={classes.inline}
+                      color="textPrimary"
+                    >
+                      À valider le {pass.date} entre {pass.begin} et {pass.end}.
+                    </Typography>
+                  </React.Fragment>
+                }
+              />
+              <ListItemSecondaryAction>
+                <IconButton edge="end" onClick={() =>{
+                  history.push({
+                      pathname : '/Pass',
+                      state :{
+                        pass : pass,
+                      }
+                    }
+                  );
+                }}>
+                  <ArrowForwardIcon/>
+                </IconButton >
+              </ListItemSecondaryAction>
+            </ListItem>
+            { passes.length > 1 &&
+              <Divider variant="inset" component="li"/>
+            }
+          </div>
+        ))
         } else {
             return (
               <ListItem alignItems="center">

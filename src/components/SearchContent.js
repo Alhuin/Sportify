@@ -35,7 +35,7 @@ export default function SearchContent({ favorites, addToFavorites, removeFromFav
   const classes = useStyles();
 
   const favIcon = (partner) => {
-    return (favorites.includes(partner)
+    return (favorites.some(e => e.id === partner.id)
         ? <FavIcontrue className={classes.favIcon} onClick={() => removeFromFavorites(partner)} />
         : <FavIconfalse className={classes.favIcon} onClick={() => addToFavorites(partner)} />)
   };

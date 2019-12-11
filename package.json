@@ -10,6 +10,7 @@
     "history": "^4.10.1",
     "intersection-observer": "^0.7.0",
     "material-ui-icons": "^1.0.0-beta.36",
+    "qrcode.react": "^1.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
@@ -18,6 +19,7 @@
     "react-router-dom": "^5.1.2",
     "react-router-hash-history": "^0.2.3",
     "react-scripts": "3.2.0",
+    "react-swipeable-views": "^0.13.3",
     "redux": "^4.0.4"
   },
   "scripts": {

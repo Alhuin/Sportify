@@ -30,7 +30,7 @@ class AppContent extends Component {
 
     switch (type) {
       case "Home":
-        content = <HomeContent favorites={favorites} passes={passes} removeFromFavorites={removeFromFavorites}/>;
+        content = <HomeContent favorites={favorites} passes={passes} removeFromFavorites={removeFromFavorites} history={history}/>;
         break;
       case "Search":
         content = <SearchContent
@@ -42,7 +42,7 @@ class AppContent extends Component {
         />;
         break;
       case "Passes":
-        content = <PassesContent />;
+        content = <PassesContent passes={passes} history={history} />;
         break;
       case "Profile":
         content = <ProfileContent exit={() => history.push('/')}/>;
